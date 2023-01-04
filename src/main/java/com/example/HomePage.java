@@ -11,7 +11,7 @@ public class HomePage extends BasePage {
 
 	}
 
-	  @FindBy(xpath = "//*[@id='app']/div[1]/div[2]/div[2]/div/div[1]/div[1]/div[1]/h5")
+	  @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/header/div[1]/div[1]/span/h6")
 	  public  WebElement homePageUserName;
 
 	  public String getHomePageText() {
