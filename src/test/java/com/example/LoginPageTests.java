@@ -32,21 +32,4 @@ public class LoginPageTests extends BaseTests{
     }
     
 
-/*	
-    @Ignore
-    @Test 
-    public void missingPassword() {
-    	
-   
-	    LoginPage objLoginPage = new LoginPage(driver);
-    	objLoginPage.login("admin", "");
-    	    	
-    	// Verify Error Message
-    	Assert.assertEquals("Invalid credentials",objLoginPage.getMissingPasswordText());
-    throw new SkipException("Skipping this exception");
-    
-    }  */  
-   
 }
-
-
