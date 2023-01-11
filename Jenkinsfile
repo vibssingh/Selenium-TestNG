@@ -12,9 +12,16 @@ pipeline {
                 // failed, record the test results and archive the jar file.
                 success {
                  //  publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'target/surefire-reports/', reportFiles: 'emailable-report.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
-                 allure includeProperties: false, jdk: '', results: [[path: 'allure-results']]
-                }
+                allure([
+                    includeProperties: false,
+                    jdk: '',
+                    properties: [],
+                    reportBuildPolicy: 'ALWAYS',
+                    results: [[path: 'target/allure-results']]
+                ])
             }
-        }
+         }
     }
+}      
+}
 }
