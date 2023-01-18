@@ -12,10 +12,14 @@ public class BaseTests {
 	public static WebDriver driver;
 	public final static int TIMEOUT = 10;    
  
-	@BeforeMethod
+    @BeforeMethod
     public void setup() {
-    	WebDriverManager.chromedriver().setup();
-	    driver = new ChromeDriver();
+    	    WebDriverManager.chromedriver().setup();
+	    ChromeOptions options = new ChromeOptions();
+            options.addArguments("--no-sandbox");
+            options.addArguments("--disable-dev-shm-usage");
+            options.addArguments("--headless");
+	    driver = new ChromeDriver(options);
 	    driver.manage().window().maximize();
 	    driver.get("https://opensource-demo.orangehrmlive.com/");	    
 	    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TIMEOUT));
