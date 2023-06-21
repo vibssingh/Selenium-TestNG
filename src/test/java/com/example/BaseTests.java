@@ -17,6 +17,7 @@ public class BaseTests {
     public void setup() {
     	    WebDriverManager.chromedriver().setup();
 	    ChromeOptions options = new ChromeOptions();
+	    options.addArguments("--remote-allow-origins=*");
             options.addArguments("--no-sandbox");
             options.addArguments("--disable-dev-shm-usage");
             options.addArguments("--headless");
