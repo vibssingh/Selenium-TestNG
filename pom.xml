@@ -6,18 +6,14 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<selenium.version>4.3.0</selenium.version>
-		<testng.version>7.6.0</testng.version>
-		<webdrivermanager.version>5.2.1</webdrivermanager.version>
-		<apache.common.version>2.4</apache.common.version>
-		<allure.testng.version>2.20.1</allure.testng.version>
-		<maven.compiler.plugin.version>3.10.1</maven.compiler.plugin.version>
-		<maven.compiler.source.version>11</maven.compiler.source.version>
-		<maven.compiler.target.version>11</maven.compiler.target.version>
-		<maven.surefire.plugin.version>3.0.0-M7</maven.surefire.plugin.version>
-		<aspectj.version>1.9.9.1</aspectj.version>
-
-
+		<selenium.version>4.21.0</selenium.version>
+		<testng.version>7.10.2</testng.version>
+		<allure.testng.version>2.27.0</allure.testng.version>
+		<maven.compiler.plugin.version>3.13.0</maven.compiler.plugin.version>
+		<maven.compiler.source.version>17</maven.compiler.source.version>
+		<maven.compiler.target.version>17</maven.compiler.target.version>
+		<maven.surefire.plugin.version>3.2.5</maven.surefire.plugin.version>
+		<aspectj.version>1.9.20.1</aspectj.version>
 	</properties>
 
 	<dependencies>
@@ -35,13 +31,6 @@
 			<artifactId>testng</artifactId>
 			<version>${testng.version}</version>
 			<scope>test</scope>
-		</dependency>
-
-		<!-- Web Driver Manager -->
-		<dependency>
-			<groupId>io.github.bonigarcia</groupId>
-			<artifactId>webdrivermanager</artifactId>
-			<version>${webdrivermanager.version}</version>
 		</dependency>
 
 		<dependency>
@@ -86,7 +75,7 @@
              </configuration>          
              <dependencies>
              
-            <!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
+            <!-- Aspectj Weaver -->
                 <dependency>
                     <groupId>org.aspectj</groupId>
                     <artifactId>aspectjweaver</artifactId>
