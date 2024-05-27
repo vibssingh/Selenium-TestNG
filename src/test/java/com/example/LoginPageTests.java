@@ -4,8 +4,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class LoginPageTests extends BaseTests{
-	 
-
     @Test
     public void invalidCredentials() {
    
@@ -16,8 +14,6 @@ public class LoginPageTests extends BaseTests{
     	 Assert.assertEquals("Invalid credentials",objLoginPage.getErrorMessage());
     
     }
-    
-
     @Test
     public void validLogin() {
    
@@ -30,6 +26,5 @@ public class LoginPageTests extends BaseTests{
     	Assert.assertEquals("Dashboard",objHomePage.getHomePageText());
     
     }
-    
 
 }
